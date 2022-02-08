@@ -1,0 +1,16 @@
+version: '2'
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=dev
+  postgres-prod:
+    container_name: postgres-prod
+    image: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=prod
